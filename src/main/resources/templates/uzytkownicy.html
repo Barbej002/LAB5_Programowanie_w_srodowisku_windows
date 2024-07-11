@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista Użytkowników</title>
+</head>
+<body>
+<h1>Lista Użytkowników</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Login</th>
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th>Aktywność</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="uzytkownik : ${uzytkownicy}">
+        <td th:text="${uzytkownik.id}">ID</td>
+        <td th:text="${uzytkownik.login}">Login</td>
+        <td th:text="${uzytkownik.imie}">Imię</td>
+        <td th:text="${uzytkownik.nazwisko}">Nazwisko</td>
+        <td th:text="${uzytkownik.aktywnosc}">Aktywność</td>
+    </tr>
+    </tbody>
+</table>
+<a href="/web/uzytkownicy/nowy">Dodaj nowego użytkownika</a>
+</body>
+</html>

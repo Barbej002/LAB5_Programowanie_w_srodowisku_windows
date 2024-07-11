@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Nowy Użytkownik</title>
+</head>
+<body>
+<h1>Nowy Użytkownik</h1>
+<form th:action="@{/web/uzytkownicy}" th:object="${uzytkownik}" method="post">
+    <label for="login">Login:</label>
+    <input type="text" id="login" name="login" th:field="*{login}"/>
+    <br/>
+    <label for="haslo">Hasło:</label>
+    <input type="password" id="haslo" name="haslo" th:field="*{haslo}"/>
+    <br/>
+    <label for="imie">Imię:</label>
+    <input type="text" id="imie" name="imie" th:field="*{imie}"/>
+    <br/>
+    <label for="nazwisko">Nazwisko:</label>
+    <input type="text" id="nazwisko" name="nazwisko" th:field="*{nazwisko}"/>
+    <br/>
+    <label for="aktywnosc">Aktywność:</label>
+    <input type="checkbox" id="aktywnosc" name="aktywnosc" th:field="*{aktywnosc}"/>
+    <br/>
+    <button type="submit">Zapisz</button>
+</form>
+<a href="/web/uzytkownicy">Wróć do listy użytkowników</a>
+</body>
+</html>
